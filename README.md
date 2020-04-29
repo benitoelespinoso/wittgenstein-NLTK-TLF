@@ -94,7 +94,7 @@ for i in {0..5}; do awk -v var=$i -F- '{if($3==var)print $0}' grado.trad.1.txt |
 
 Para cada uno de los grados  {0,1,...5}
 
-
+![aforismoS por grados](/ruta/a/la/imagen.jpg)
 
 
 
