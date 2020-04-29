@@ -69,7 +69,7 @@ cat num_char_perLine.1.txt |awk '{sum+=$1} END { print "Average = ",sum/NR}'
 
 ~~~
 
-** Average = 230.156 **
+**Average = 230.156**
 
 
 
@@ -85,12 +85,12 @@ for i in {0..5}; do awk -v var=$i -F- '{if($3==var)print $0}' grado.trad.1.txt |
 
 ~~~
 
-7
-25
-124
-245
-118
-7
+- 7
+- 25
+- 124
+- 245
+- 118
+- 7
 
 Para cada uno de los grados  {0,1,...5}
 
