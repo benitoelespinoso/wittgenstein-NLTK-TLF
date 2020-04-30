@@ -51,9 +51,9 @@ El texto tiene aforismos de grado entre 0 y 5 (muy pocos con grado 5)
 
 
 
-## bash
+# bash
 
-### Longitud de los aforismos
+## Longitud de los aforismos
 
 el fichero trad.1.txt es el tratactus en ESP
 
@@ -75,7 +75,7 @@ cat num_char_perLine.1.txt |awk '{sum+=$1} END { print "Average = ",sum/NR}'
 
 
 
-### Cuantos aforismos de cada GRADO
+## Cuantos aforismos de cada GRADO
 
 ¿Cuantos aforismos hay de cada grado? 
 
@@ -99,7 +99,7 @@ Para cada uno de los grados  {0,1,...5}
 ![aforismos por grados](img/graf1.png)
 
 
-### Longitud por GRADOS
+## Longitud por GRADOS
 
 La longitud promedio de los aforismos según su grado:
 
@@ -124,9 +124,9 @@ Cuanto mayor es el grado, mayor es la longitud del aforismo
 ![longitud_aforismos por grados](img/graf2.png)
 
 
-## nltk
+# NLTK
 
-### Aforismos mónicos
+## Aforismos mónicos
 
 Se sustituye la ruta donde residen los aforismos (en inglés) del siguiente script:
 
@@ -226,7 +226,7 @@ Complementariamente a lo que se obtenía antes (los aforismos son mas largos cua
 El capítulo 5 es el que menor proporción tiene mónicos. (en Datos (visualmente))
 
 
-### Palabras mas frecuentes
+## Palabras mas frecuentes
 
 Se ejecuta:
 
@@ -274,7 +274,7 @@ Y se pueden ver como:
 ![aforismos por grados](img/wordcloud.png)  
 
 
-### Dispersion de términos
+## Dispersion de términos
 
 Se ejecuta:
 
@@ -296,16 +296,16 @@ text.dispersion_plot(["logical","fact","formal"])
 
 
 
-### Diversidad léxica 
+## Diversidad léxica 
 
 La diversidad léxica se refiere al número de palabras diferentes utilizadas en un texto en relación a la longitud del mismo. Un rango mayor indica una diversidad mayor para una misma longitud textual.
 
-Se ejecuta [el script] (src/tract_div_lexi_grado2.py)
+Se ejecuta el script *src/tract_div_lexi_grado2.py*
 
 
+![diversidad_lexica](img/div_lex.png)  
 
-
-
+La linea de regresión muestra que el texto no es literario, pues está ligeramente escorada hacia el eje *Story Length*
 
 
 
