@@ -33,8 +33,7 @@ El aforismo 3.121 tiene GRADO = 3
 
 ## Ficheros de input
 
-Se adjuntan los ficheros de input utilizados.
-
+Se adjuntan los ficheros de input utilizados. En el directorio "dat"
 
 El tratactus en ingles
 El tratactus en español
@@ -47,9 +46,6 @@ Para cada una de estas versiones se incluyen subdirectorios donde el texto se ha
 El texto tiene 7 capítulos. Los capítulos 1 y 7 son triviales ó muy escuetos. 
 
 El texto tiene aforismos de grado entre 0 y 5 (muy pocos con grado 5)
-
-
-
 
 # bash
 
@@ -73,7 +69,7 @@ cat num_char_perLine.1.txt |awk '{sum+=$1} END { print "Average = ",sum/NR}'
 
 **Average = 230.156**
 
-
+La longitud de un aforismo promedio es 230 caracteres.
 
 ## Cuantos aforismos de cada GRADO
 
@@ -149,7 +145,7 @@ for fileid in newcorpus.fileids():
 
 Se obtiene un CSV así:
 
-num_chars num_words num_sents fileid  
+num_chars  num_words num_sents   fileid  
 56 		15 	1  	1.1.txt  
 78 		19  	1  	1.11.txt  
 96 		22  	1  	1.12.txt  
@@ -164,7 +160,8 @@ num_chars num_words num_sents fileid
 285     	58  	2  	2.0122.txt  
 214     	44  	3  	2.0123.txt  
 
-Que contiene para cada aforismo: numero de caracteres, numero de palabras, numero de frases, y el fileid (que identifica al aforismo en cuestión)
+Que contiene para cada aforismo: 
+numero de caracteres, numero de palabras, numero de frases, y el fileid (que identifica al aforismo en cuestión)
 
 
 Si llamamos al fichero resultante (por ejemplo) kk.txt
@@ -266,7 +263,6 @@ plt.show()
 Y se pueden ver como:
 
 
-
 ![aforismos por grados](img/freq_words.png)  
 
 ![aforismos por grados](img/freq_words_2.png)  
@@ -293,7 +289,6 @@ text.dispersion_plot(["logical","fact","formal"])
 *Imagen* o *escena* (como es sabido que el autor llama en varias ocasiones a la materia constitutiva del pensamiento) es mencionada, sobre todo, en la parte inicial del texto. 
 
 ![aforismos por grados](img/disp3.png)  
-
 
 
 ## Diversidad léxica 
