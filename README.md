@@ -303,9 +303,16 @@ Se ejecuta el script *src/tract_div_lexi_grado2.py*
 La linea de regresión muestra que el texto no es literario, pues está ligeramente escorada hacia el eje *Story Length*
 
 
-Si se calcula la diversidad lexica segun los diferenetes capítulos:
+Si se calcula la diversidad lexica segun los diferenetes capítulos (se cambia la ruta que toma el script como INPUT):
 
-![diversidad_lexica](img/div_lex_cap.png)  
-
+![diversidad_lexica_cap](img/div_lex_cap.png)  
 
 Los capítulos 3 y 5 son los que menos diversidad muestran.
+
+Si se calcula la diversidad léxica para los grados (IDEM. Se cambia la ruta que toma el script como INPUT)
+
+![diversidad_lexica_grad](img/div_lex_grad.png)  
+
+Recuérdese que a mayor grado, mayor longitud de los aforismos. El diagrama del grado_3 muestra que es el más diverso (el indicador alcanza 2.30)
+
+
