@@ -303,7 +303,9 @@ Se ejecuta el script *src/tract_div_lexi_grado2.py*
 La linea de regresión muestra que el texto no es literario, pues está ligeramente escorada hacia el eje *Story Length*
 
 
+Si se calcula la diversidad lexica segun los diferenetes capítulos:
+
+![diversidad_lexica](img/div_lex_cap.png)  
 
 
-
-
+Los capítulos 3 y 5 son los que menos diversidad muestran.
