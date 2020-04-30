@@ -272,3 +272,32 @@ Y se pueden ver como:
 
 ![aforismos por grados](img/wordcloud.png)  
 
+
+### Dispersion de términos
+
+Se ejecuta:
+
+~~~
+text.dispersion_plot(["proposition","picture","true"])
+text.dispersion_plot(["proposition","world","true"])
+text.dispersion_plot(["logical","fact","formal"])
+~~~
+
+![aforismos por grados](img/disp1.png)  
+
+![aforismos por grados](img/disp2.png)  
+
+![aforismos por grados](img/disp3.png)  
+
+Se aprecia que:
+
+*Proposición* parece ser un término que se menciona densa y uniformemente a lo largo de todo el texto. No sólo es el que aparece con mayor frecuencia, es que está diseminado a lo largo del texto. 
+
+*Imagen* o *escena* (como es sabido que el autor llama en varias ocasiones a la materia constitutiva del pensamiento) es mencionada, sobre todo, en la parte inicial del texto. 
+
+
+
+
+
+
+
