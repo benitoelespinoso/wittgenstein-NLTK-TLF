@@ -35,6 +35,8 @@ El aforismo 3.121 tiene GRADO = 3
 
 Se adjuntan los ficheros de input utilizados.
 
+
+
 El tratactus en ingles
 El tratactus en español
 
@@ -52,7 +54,7 @@ El texto tiene aforismos de grado entre 0 y 5 (muy pocos con grado 5)
 
 ## bash
 
-### bash.1
+### Longitud de los aforismos
 
 el fichero trad.1.txt es el tratactus en ESP
 
@@ -74,7 +76,7 @@ cat num_char_perLine.1.txt |awk '{sum+=$1} END { print "Average = ",sum/NR}'
 
 
 
-### bash.2
+### Cuantos aforismos de cada GRADO
 
 ¿Cuantos aforismos hay de cada grado? 
 
@@ -98,7 +100,7 @@ Para cada uno de los grados  {0,1,...5}
 ![aforismos por grados](img/graf1.png)
 
 
-### bash.3
+### Longitud por GRADOS
 
 La longitud promedio de los aforismos según su grado:
 
@@ -186,7 +188,7 @@ for i in {1..7}; do cat kk.txt | awk '$3==1' | awk '{print $4}' | awk -v var=$i 
 
 paste totales parciales > kk
 	
-awk '{print "% de aforismos de una sola sentencia. Capítulo "NR"  " $2/$1}' kk
+awk '{print "% de aforismos mónicos. Capítulo "NR"  " $2/$1}' kk
 ~~~
 
 % de aforismos mónicos. Capítulo 1  1  
@@ -222,7 +224,7 @@ Que devuelve unos datos curiosos:
 
 Complementariamente a lo que se obtenía antes (los aforismos son mas largos cuanto mayor es su grado) aquí se observa que en los grados 3 y 4 los aforismos tienden a ser en menor proporción mónicos.
 
-El capítulo 5 es el que menor proporción tiene mónicos.
+El capítulo 5 es el que menor proporción tiene mónicos. (en Datos (visualmente))
 
 
 ### Palabras mas frecuentes
@@ -285,15 +287,25 @@ text.dispersion_plot(["logical","fact","formal"])
 
 ![aforismos por grados](img/disp1.png)  
 
+*Proposición* parece ser un término que se menciona densa y uniformemente a lo largo de todo el texto. No sólo es el que aparece con mayor frecuencia, es que está diseminado a lo largo del texto. 
+
 ![aforismos por grados](img/disp2.png)  
+
+*Imagen* o *escena* (como es sabido que el autor llama en varias ocasiones a la materia constitutiva del pensamiento) es mencionada, sobre todo, en la parte inicial del texto. 
 
 ![aforismos por grados](img/disp3.png)  
 
-Se aprecia que:
 
-*Proposición* parece ser un término que se menciona densa y uniformemente a lo largo de todo el texto. No sólo es el que aparece con mayor frecuencia, es que está diseminado a lo largo del texto. 
 
-*Imagen* o *escena* (como es sabido que el autor llama en varias ocasiones a la materia constitutiva del pensamiento) es mencionada, sobre todo, en la parte inicial del texto. 
+### Diversidad léxica 
+
+La diversidad léxica se refiere al número de palabras diferentes utilizadas en un texto en relación a la longitud del mismo. Un rango mayor indica una diversidad mayor para una misma longitud textual.
+
+Se ejecuta [el script] (src/tract_div_lexi_grado2.py)
+
+
+
+
 
 
 
