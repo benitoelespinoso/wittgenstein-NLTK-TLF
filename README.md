@@ -36,7 +36,6 @@ El aforismo 3.121 tiene GRADO = 3
 Se adjuntan los ficheros de input utilizados.
 
 
-
 El tratactus en ingles
 El tratactus en español
 
