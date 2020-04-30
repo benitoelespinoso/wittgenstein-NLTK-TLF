@@ -218,4 +218,57 @@ done
 
 Que devuelve unos datos curiosos:
 
+![aforismos por grados](img/monicos_tableau.png)
+
+Complementariamente a lo que se obtenía antes (los aforismos son mas largos cuanto mayor es su grado) aquí se observa que en los grados 3 y 4 los aforismos tienden a ser en menor proporción mónicos.
+
+El capítulo 5 es el que menor proporción tiene mónicos.
+
+
+### Palabras mas frecuentes
+
+Se ejecuta:
+
+~~~
+import nltk, string
+from nltk import FreqDist
+f = open('en.tratactus.txt', encoding="utf8")
+raw = f.read()
+tokens = nltk.word_tokenize(raw)
+text = nltk.Text(tokens)
+words = [w.lower() for w in tokens]
+stopwords = nltk.corpus.stopwords.words('english')
+stopwords.append('The')
+stopwords.append('p')
+stopwords.append('q')
+stopwords.append('A')
+stopwords.append('I')
+stopwords.append('If')
+stopwords.append('In')
+stopwords.append('It')
+stopwords.append('x')
+stopwords.append('And')
+fdist = FreqDist(text)
+# Freq Dist de palabras
+fdist_no_punc_no_stopwords = nltk.FreqDist(dict((words, freq) for words, freq in fdist.items() if words not in stopwords and words.isalpha()))
+fdist_no_punc_no_stopwords.plot(20, cumulative=True, title="Términos más utilizados")
+fdist_no_punc_no_stopwords.plot(20, cumulative=False, title="Términos más utilizados")
+# wordcloud
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+wc = WordCloud().generate(' '.join(words))
+plt.imshow(wc, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+~~~
+
+Y se pueden ver como:
+
+
+
+![aforismos por grados](img/freq_words.png)  
+
+![aforismos por grados](img/freq_words_2.png)  
+
+![aforismos por grados](img/wordcloud.png)  
 
