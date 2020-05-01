@@ -356,7 +356,7 @@ fdist = FreqDist(text)
 fdist_no_punc_no_stopwords = nltk.FreqDist(dict((word, freq) for word, freq in fdist.items() if word not in stopwords and word.isalpha()))
 ~~~
 
-Se puede consultar la similitude de determinados términos como:
+Se puede consultar la similitudes de determinados términos como:
 
 ~~~
 text.similar("proposición")
@@ -386,6 +386,29 @@ Y, por ejemplo, para algunos casos aparecidos, ver su diseminación a los largo 
 
 Tomaremos por ejemplo la triada: figura realidad lógica (proposición)
 
-![p_of_speech](img/prop_sin_sim.png)  
+![sin_sim](img/prop_sin_sim.png)  
 
+## Bigramas
 
+Un bigrama es un grupos de dos letras, dos sílabas, o dos palabras. Son utilizados comúnmente como base para el análisis estadístico de un texto. Ayudan a calcular la probabilidad condicional de una palabra dada la palabra precedente.
+
+Mediente el [el siguiente script](src/tract_bigrams.py) se pueden calcular y visualizar
+
+¿Cuales son los bigramas mas frecuentes?
+
+('leaves', 'open')  
+('who', 'understands')  
+('successive', 'applications')  
+('infinitely', 'many')  
+('visual', 'field')  
+('natural', 'sciences')  
+('rule', 'governing')  
+('new', 'device')  
+('natural', 'science')  
+('mathematical', 'multiplicity')  
+
+![bigramas_mas](img/bigrams_tract.png) 
+
+¿Y los menos frecuentes?
+
+![bigramas_menos](img/bigrams_2_tract.png) 
