@@ -141,7 +141,7 @@ for fileid in newcorpus.fileids():
 ~~~
 
 Se obtiene un CSV así:
-
+~~~
 num_chars  num_words num_sents   fileid  
 56 		15 	1  	1.1.txt  
 78 		19  	1  	1.11.txt  
@@ -156,7 +156,7 @@ num_chars  num_words num_sents   fileid
 707    		136  	6  	2.0121.txt  
 285     	58  	2  	2.0122.txt  
 214     	44  	3  	2.0123.txt  
-
+~~~
 Que contiene para cada aforismo: 
 numero de caracteres, numero de palabras, numero de frases, y el fileid (que identifica al aforismo en cuestión)
 
