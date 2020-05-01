@@ -1,7 +1,7 @@
 # wittgenstein-NLTK-TLF
 NLTK and bash quantitative parsing of TLF
 
-## Software necesario (win10)
+## 1. Software necesario (win10)
 
 - python 3.8
 - pip install -U nltk
@@ -19,7 +19,7 @@ https://answers.microsoft.com/en-us/windows/forum/all/microsoft-visual-c-140/6f0
 https://www.scivision.dev/python-windows-visual-c-14-required/
 
 
-## Wittgenstein (tractatus logico-philosophicus)
+## 2. Wittgenstein (tractatus logico-philosophicus)
 
 No necesita presentación. 
 Se ha definido el GRADO de un aforismo del texto, es igual a la cantidad de cifras tras el "." que aparece en la indexación de los aforismos: 
@@ -28,7 +28,7 @@ El aforismo 2.21 (por ejemplo) tiene GRADO = 2.
 El aforismo 6 tiene GRADO = 0
 El aforismo 3.121 tiene GRADO = 3
 
-## Ficheros de input
+## 3. Ficheros de input
 
 Se adjuntan los ficheros de input utilizados. En el [directorio dat](dat)  
 
@@ -46,7 +46,7 @@ El texto tiene aforismos de grado entre 0 y 5 (muy pocos con grado 5)
 
 # bash
 
-## Longitud de los aforismos
+## 1. Longitud de los aforismos
 
 el fichero *trad.1.txt* es el tratactus en ESP
 
@@ -68,7 +68,7 @@ cat num_char_perLine.1.txt |awk '{sum+=$1} END { print "Average = ",sum/NR}'
 
 La longitud de un aforismo promedio es 230 caracteres.
 
-## Cuantos aforismos de cada GRADO
+## 2. Cuantos aforismos de cada GRADO
 
 ¿Cuantos aforismos hay de cada grado? 
 
@@ -92,7 +92,7 @@ Para cada uno de los grados  {0,1,...5}
 ![aforismos por grados](img/graf1.png)
 
 
-## Longitud por GRADOS
+## 3. Longitud por GRADOS
 
 La longitud promedio de los aforismos según su grado:
 
@@ -119,7 +119,7 @@ Cuanto mayor es el grado, mayor es la longitud del aforismo
 
 # NLTK
 
-## Aforismos mónicos
+## 1. Aforismos mónicos
 
 Se sustituye la ruta donde residen los aforismos (en inglés) del siguiente script:
 
@@ -220,7 +220,7 @@ Complementariamente a lo que se obtenía antes (los aforismos son mas largos cua
 El capítulo 5 es el que menor proporción tiene mónicos. (en Datos (visualmente))
 
 
-## Palabras mas frecuentes
+## 2. Palabras mas frecuentes
 
 Se ejecuta:
 
@@ -267,7 +267,7 @@ Y se pueden ver como:
 ![aforismos por grados](img/wordcloud.png)  
 
 
-## Dispersion de términos
+## 3. Dispersion de términos
 
 Se ejecuta:
 
@@ -288,7 +288,7 @@ text.dispersion_plot(["logical","fact","formal"])
 ![aforismos por grados](img/disp3.png)  
 
 
-## Diversidad léxica 
+## 4. Diversidad léxica 
 
 La diversidad léxica se refiere al número de palabras diferentes utilizadas en un texto en relación a la longitud del mismo. Un rango mayor indica una diversidad mayor para una misma longitud textual.
 
@@ -311,7 +311,7 @@ Si se calcula la diversidad léxica para los grados (IDEM. Se cambia la ruta que
 Recuérdese que a mayor grado, mayor longitud de los aforismos. El diagrama del grado_3 muestra que es el más diverso (el indicador alcanza 2.30)
 
 
-## Densidad léxica 
+## 5. Densidad léxica 
 
 La densidad léxica se entiende como la relación entre el total de palabras léxicas -o de contenido semántico- (verbos, nombres, adjetivos y algunos adverbios) comparado con las llamadas palabras gramaticales -o funcionales- (artículos, preposiciones, conjunciones, entre otros)
 
@@ -333,13 +333,13 @@ Si se ejecuta [el siguiente script](src/tract_mas_dens.py) se obtiene:
 ![densidad_lex](img/mas_dens.png)  
 
 
-## Categorías gramaticales (parts of speech)
+## 6. Categorías gramaticales (parts of speech)
 
 Para el cálculo de las proporciones que las principales categorías significativas (N, V, ADV, ADJ) tienen entre ellas, se ejecuta el script de [parts of speech](src/part_speech.py)
 
 ![p_of_speech](img/parts_speech_entero.png)  
 
-## Sinónimos o similares
+## 7. Sinónimos o similares
 
 Ejecutemos sobre el texto en español [lo siguiente](src/sin_sim.py):
 
@@ -388,7 +388,7 @@ Tomaremos por ejemplo la triada: figura realidad lógica (proposición)
 
 ![sin_sim](img/prop_sin_sim.png)  
 
-## Bigramas
+## 8. Bigramas
 
 Un bigrama es un grupos de dos letras, dos sílabas, o dos palabras. Son utilizados comúnmente como base para el análisis estadístico de un texto. Ayudan a calcular la probabilidad condicional de una palabra dada la palabra precedente. Es decir, evidencia aquellas palabras que tienen una fuerte dependencia mutua.
 
