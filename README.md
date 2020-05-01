@@ -292,13 +292,11 @@ text.dispersion_plot(["logical","fact","formal"])
 
 La diversidad léxica se refiere al número de palabras diferentes utilizadas en un texto en relación a la longitud del mismo. Un rango mayor indica una diversidad mayor para una misma longitud textual.
 
-Se ejecuta el script *src/tract_div_lexi_grado2.py*
-
+Se ejecuta el [script](src/tract_div_lexi_grado2.py)
 
 ![diversidad_lexica](img/div_lex.png)  
 
 La linea de regresión muestra que el texto no es literario, pues está ligeramente escorada hacia el eje *Story Length*
-
 
 Si se calcula la diversidad lexica segun los diferenetes capítulos (se cambia la ruta que toma el script como INPUT):
 
@@ -317,11 +315,12 @@ Recuérdese que a mayor grado, mayor longitud de los aforismos. El diagrama del 
 
 La densidad léxica se entiende como la relación entre el total de palabras léxicas -o de contenido semántico- (verbos, nombres, adjetivos y algunos adverbios) comparado con las llamadas palabras gramaticales -o funcionales- (artículos, preposiciones, conjunciones, entre otros)
 
-Se ejecuta el script *src/tract_dens_adv.py*
+Se ejecuta el [script](src/tract_dens_adv.py)
 
 ![densidad_lex_adv](img/adv_total.png)  
 
-O bien *src/tract_dens_adj.py* para el caso de los adjetivos.
+O bien [este otro script](src/tract_dens_adj.py) para el caso de los adjetivos.
+
 
 ![densidad_lex_adj](img/adj_total.png)  
 
@@ -329,7 +328,7 @@ Se evidencia que los *nombres* son los léxicos mas frecuentes en el texto. Camb
 
 En concreto puede calcularse que existen el doble de nombres que de verbos, aunque casi los mismo adjetivos qeu adverbios (indicando, una vez más, lo poco enfático o literario del texto, que usa los nombre como *concpetos* sin adjetivaciones)
 
-Si se ejecuta *src/tract_mas_dens.py* se obtiene:
+Si se ejecuta [el siguiente script](src/tract_mas_dens.py) se obtiene:
 
 ![densidad_lex_adj](img/mas_dens.png)  
 
