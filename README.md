@@ -326,12 +326,66 @@ O bien [este otro script](src/tract_dens_adj.py) para el caso de los adjetivos.
 
 Se evidencia que los *nombres* son los léxicos mas frecuentes en el texto. Cambiando la ruta INPUT en el script se puede obtener el cálculo bien por capítulos ó bien por grados.
 
-En concreto puede calcularse que existen el doble de nombres que de verbos, aunque casi los mismo adjetivos qeu adverbios (indicando, una vez más, lo poco enfático o literario del texto, que usa los nombre como *concpetos* sin adjetivaciones)
+En concreto puede calcularse que existen el doble de nombres que de verbos, aunque casi los mismo adjetivos que adverbios (indicando, una vez más, lo poco enfático o literario del texto, que usa los nombre como *conceptos* sin adjetivaciones)
 
 Si se ejecuta [el siguiente script](src/tract_mas_dens.py) se obtiene:
 
-![densidad_lex_adj](img/mas_dens.png)  
+![densidad_lex](img/mas_dens.png)  
 
 
+## Categorías gramaticales (parts of speech)
+
+Para el cálculo de las proporciones que las principales categorías significativas (N, V, ADV, ADJ) tienen entre ellas, se ejecuta el script de [parts of speech](src/part_speech.py)
+
+![p_of_speech](img/parts_speech_entero.png)  
+
+## Sinónimos o similares
+
+Ejecutemos sobre el texto en español [lo siguiente](src/sin_sim.py):
+
+~~~
+import nltk
+from nltk.corpus import PlaintextCorpusReader
+corpus_root = r'C:\Users\guille\Google Drive\NLTK\DEF\ficheros_in\Tratactus\esp\afo'
+from nltk import FreqDist
+newcorpus = PlaintextCorpusReader(corpus_root, '.*')
+tokens = nltk.word_tokenize(newcorpus.raw())
+text = nltk.Text(tokens)
+stopwords = nltk.corpus.stopwords.words('spanish')
+fdist = FreqDist(text)
+fdist_no_punc_no_stopwords = nltk.FreqDist(dict((word, freq) for word, freq in fdist.items() if word not in stopwords and word.isalpha()))
+~~~
+
+Se puede consultar la similitude de determinados términos como:
+
+~~~
+text.similar("proposición")
+~~~
+figura realidad lógica forma operación tautología filosofía
+descripción expresión negación probabilidad cosa ley contradicción red
+verdad matemática mecánica serie que
+~~~
+text.similar("mundo")
+~~~
+objeto signo caso que espacio sentido lenguaje darse complejo
+pensamiento símbolo número modo contrario yo otro índice ámbito
+procedimiento ojo
+~~~
+text.common_contexts(["proposición","figura"])
+~~~
+la_se la_es la_pertenece la_con la_no la_el la_que la_la la_tiene
+una_en la_determina una_de la_y una_del la_representa la_puede
+la_porque una_como una_el toda_es
+~~~
+text.common_contexts(["lenguaje","mundo"])
+~~~
+el_el del_el el_no del_que
+
+
+Y, por ejemplo, para algunos casos aparecidos, ver su diseminación a los largo del texto:
+
+Tomaremos por ejemplo la triada: figura realidad lógica (proposición)
+
+![p_of_speech](img/prop_sin_sim.png)  
 
 
