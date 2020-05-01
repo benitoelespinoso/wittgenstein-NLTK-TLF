@@ -4,13 +4,10 @@ NLTK and bash quantitative parsing of TLF
 ## Software necesario (win10)
 
 - python 3.8
-
 - pip install -U nltk
-
 - ejecutar 
   - import nltk
   - nltk.download() -- ALL
-
 - pip install -U numpy
 - pip install -U matplotlib
 - pip install scipy
@@ -22,7 +19,7 @@ https://answers.microsoft.com/en-us/windows/forum/all/microsoft-visual-c-140/6f0
 https://www.scivision.dev/python-windows-visual-c-14-required/
 
 
-## wittgenstein (tractatus logico-philosophicus)
+## Wittgenstein (tractatus logico-philosophicus)
 
 No necesita presentación. 
 Se ha definido el GRADO de un aforismo del texto, es igual a la cantidad de cifras tras el "." que aparece en la indexación de los aforismos: 
@@ -33,7 +30,7 @@ El aforismo 3.121 tiene GRADO = 3
 
 ## Ficheros de input
 
-Se adjuntan los ficheros de input utilizados. En el directorio "dat"
+Se adjuntan los ficheros de input utilizados. En el [directorio dat](dat)  
 
 El tratactus en ingles
 El tratactus en español
@@ -51,7 +48,7 @@ El texto tiene aforismos de grado entre 0 y 5 (muy pocos con grado 5)
 
 ## Longitud de los aforismos
 
-el fichero trad.1.txt es el tratactus en ESP
+el fichero *trad.1.txt* es el tratactus en ESP
 
 La longitud promedio de los aforismos del tratado (ESP) es:
 
@@ -314,5 +311,28 @@ Si se calcula la diversidad léxica para los grados (IDEM. Se cambia la ruta que
 ![diversidad_lexica_grad](img/div_lex_grad.png)  
 
 Recuérdese que a mayor grado, mayor longitud de los aforismos. El diagrama del grado_3 muestra que es el más diverso (el indicador alcanza 2.30)
+
+
+## Densidad léxica 
+
+La densidad léxica se entiende como la relación entre el total de palabras léxicas -o de contenido semántico- (verbos, nombres, adjetivos y algunos adverbios) comparado con las llamadas palabras gramaticales -o funcionales- (artículos, preposiciones, conjunciones, entre otros)
+
+Se ejecuta el script *src/tract_dens_adv.py*
+
+![densidad_lex_adv](img/adv_total.png)  
+
+O bien *src/tract_dens_adj.py* para el caso de los adjetivos.
+
+![densidad_lex_adj](img/adj_total.png)  
+
+Se evidencia que los *nombres* son los léxicos mas frecuentes en el texto. Cambiando la ruta INPUT en el script se puede obtener el cálculo bien por capítulos ó bien por grados.
+
+En concreto puede calcularse que existen el doble de nombres que de verbos, aunque casi los mismo adjetivos qeu adverbios (indicando, una vez más, lo poco enfático o literario del texto, que usa los nombre como *concpetos* sin adjetivaciones)
+
+Si se ejecuta *src/tract_mas_dens.py* se obtiene:
+
+![densidad_lex_adj](img/mas_dens.png)  
+
+
 
 
