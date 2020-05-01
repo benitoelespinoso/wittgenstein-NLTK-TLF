@@ -390,11 +390,11 @@ Tomaremos por ejemplo la triada: figura realidad lógica (proposición)
 
 ## Bigramas
 
-Un bigrama es un grupos de dos letras, dos sílabas, o dos palabras. Son utilizados comúnmente como base para el análisis estadístico de un texto. Ayudan a calcular la probabilidad condicional de una palabra dada la palabra precedente.
+Un bigrama es un grupos de dos letras, dos sílabas, o dos palabras. Son utilizados comúnmente como base para el análisis estadístico de un texto. Ayudan a calcular la probabilidad condicional de una palabra dada la palabra precedente. Es decir, evidencia aquellas palabras que tienen una fuerte dependencia mutua.
 
-Mediente el [el siguiente script](src/tract_bigrams.py) se pueden calcular y visualizar
+Mediante el [el siguiente script](src/tract_bigrams.py) se pueden calcular y visualizar
 
-¿Cuales son los bigramas mas frecuentes?
+¿Cuales son los bigramas mas frecuentes usando [PMI](https://en.wikipedia.org/wiki/Pointwise_mutual_information) como medida de ascociación?
 
 ('leaves', 'open')  
 ('who', 'understands')  
@@ -406,6 +406,9 @@ Mediente el [el siguiente script](src/tract_bigrams.py) se pueden calcular y vis
 ('new', 'device')  
 ('natural', 'science')  
 ('mathematical', 'multiplicity')  
+
+
+Y de forma cruda:
 
 ![bigramas_mas](img/bigrams_tract.png) 
 
