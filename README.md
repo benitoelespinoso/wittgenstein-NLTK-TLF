@@ -219,8 +219,25 @@ Complementariamente a lo que se obtenía antes (los aforismos son mas largos cua
 
 El capítulo 5 es el que menor proporción tiene mónicos. (en Datos (visualmente))
 
+## 2. Longitud or capítulos
 
-## 2. Palabras mas frecuentes
+Se ejecuta sobre el CSV del apartado 1:
+
+~~~
+for i in {1..7}; do tr . ' ' < num_char.txt | awk -v var=$i '{if($4==var)print $1}' | awk '{sum+=$1} END { print "Average_Por_cap = ",sum/NR}' ; done
+~~~
+ 
+Average_Por_cap =  62.5714  
+Average_Por_cap =  118.818  
+Average_Por_cap =  201.296  
+Average_Por_cap =  300.726  
+Average_Por_cap =  270.561  
+Average_Por_cap =  268.846  
+Average_Por_cap =  59  
+
+Siendo la media del texto completo 230, solamente la segunda mitad del libro es ligeramente mayor
+
+## 3. Palabras mas frecuentes
 
 Se ejecuta:
 
@@ -267,7 +284,7 @@ Y se pueden ver como:
 ![aforismos por grados](img/wordcloud.png)  
 
 
-## 3. Dispersion de términos
+## 4. Dispersion de términos
 
 Se ejecuta:
 
@@ -288,7 +305,7 @@ text.dispersion_plot(["logical","fact","formal"])
 ![aforismos por grados](img/disp3.png)  
 
 
-## 4. Diversidad léxica 
+## 5. Diversidad léxica 
 
 La diversidad léxica se refiere al número de palabras diferentes utilizadas en un texto en relación a la longitud del mismo. Un rango mayor indica una diversidad mayor para una misma longitud textual.
 
@@ -311,7 +328,7 @@ Si se calcula la diversidad léxica para los grados (IDEM. Se cambia la ruta que
 Recuérdese que a mayor grado, mayor longitud de los aforismos. El diagrama del grado_3 muestra que es el más diverso (el indicador alcanza 2.30)
 
 
-## 5. Densidad léxica 
+## 6. Densidad léxica 
 
 La densidad léxica se entiende como la relación entre el total de palabras léxicas -o de contenido semántico- (verbos, nombres, adjetivos y algunos adverbios) comparado con las llamadas palabras gramaticales -o funcionales- (artículos, preposiciones, conjunciones, entre otros)
 
@@ -333,13 +350,13 @@ Si se ejecuta [el siguiente script](src/tract_mas_dens.py) se obtiene:
 ![densidad_lex](img/mas_dens.png)  
 
 
-## 6. Categorías gramaticales (parts of speech)
+## 7. Categorías gramaticales (parts of speech)
 
 Para el cálculo de las proporciones que las principales categorías significativas (N, V, ADV, ADJ) tienen entre ellas, se ejecuta el script de [parts of speech](src/part_speech.py)
 
 ![p_of_speech](img/parts_speech_entero.png)  
 
-## 7. Sinónimos o similares
+## 8. Sinónimos o similares
 
 Ejecutemos sobre el texto en español [lo siguiente](src/sin_sim.py):
 
@@ -388,7 +405,7 @@ Tomaremos por ejemplo la triada: figura realidad lógica (proposición)
 
 ![sin_sim](img/prop_sin_sim.png)  
 
-## 8. Bigramas
+## 9. Bigramas
 
 Un bigrama es un grupos de dos letras, dos sílabas, o dos palabras. Son utilizados comúnmente como base para el análisis estadístico de un texto. Ayudan a calcular la probabilidad condicional de una palabra dada la palabra precedente. Es decir, evidencia aquellas palabras que tienen una fuerte dependencia mutua.
 
